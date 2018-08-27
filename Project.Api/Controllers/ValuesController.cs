@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Project.Model;
 
 namespace Project.Api.Controllers
 {
@@ -14,11 +15,11 @@ namespace Project.Api.Controllers
         /// 获取数据列表
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+        //[HttpGet]
+        //public IEnumerable<string> Get()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
 
         // GET api/values/5
 
@@ -63,6 +64,17 @@ namespace Project.Api.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+
+        /// <summary>
+        /// 根据用户信息获取列表
+        /// </summary>
+        /// <param name="user">用户信息</param>
+        /// <returns></returns>
+        [HttpGet]
+        public IEnumerable<string> Get(MyUser user)
+        {
+            return new string[] { "value1", "value2" };
         }
     }
 }

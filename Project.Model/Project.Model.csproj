@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.0\Project.Model.xml</DocumentationFile>
+    <OutputPath>bin\Debug\netcoreapp2.0\</OutputPath>
+  </PropertyGroup>
+
 </Project>
